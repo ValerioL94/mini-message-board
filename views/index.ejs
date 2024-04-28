@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1><%= title %> - Home</h1>
+    <a href="/new"><p>Add new message</p></a>
+    <div class="msg-wrapper">
+      <% if (messages.length > 0) { %> <% messages.forEach(msg => { %>
+      <div class="msg">
+        <h2 class="user"><%=msg.user %></h2>
+        <p class="text"><%=msg.text %></p>
+        <p class="date"><%=msg.added %></p>
+      </div>
+      <% }) %> <% } else { %>
+      <p class="no-msg">There are no messages to display</p>
+      <% } %>
+    </div>
   </body>
 </html>

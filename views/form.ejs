@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | New</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %> - New</h1>
+    <div>
+      <a href="/"><p>Go to homepage</p></a>
+      <form class="new-msg" method="POST" action="/new">
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" />
+        </div>
+        <div>
+          <label for="msg">Message:</label>
+          <input type="text" name="msg" id="msg" />
+        </div>
+        <button class="form-submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
