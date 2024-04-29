@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %> | New</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+  <%- include ('./partials/head.ejs') %>
   <body>
-    <h1><%= title %> - New</h1>
-    <div>
+    <%- include ('./partials/header.ejs') %>
+    <main>
       <a href="/"><p>Go to homepage</p></a>
       <form class="new-msg" method="POST" action="/new">
         <div>
@@ -21,6 +16,7 @@
         </div>
         <button class="form-submit">Submit</button>
       </form>
-    </div>
+    </main>
+    <%- include ('./partials/footer.ejs') %>
   </body>
 </html>

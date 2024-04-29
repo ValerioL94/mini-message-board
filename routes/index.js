@@ -16,12 +16,12 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Mini Messageboard', messages });
+  res.render('index', { title: 'Home', messages });
 });
 
 // GET new-message page
 router.get('/new', function (req, res) {
-  res.render('form', { title: 'Mini Messageboard' });
+  res.render('form', { title: 'New' });
 });
 
 // POST new-message and redirect to home page
