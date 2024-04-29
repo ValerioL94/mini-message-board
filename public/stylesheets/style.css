@@ -1,35 +1,64 @@
-body {
-  padding: 50px;
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+body {
+  display: grid;
+  grid-template-rows: 50px auto 50px;
 }
 
 a {
   color: #00b7ff;
 }
-
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00b7ff;
+  border-bottom: 3px solid black;
+}
+header h1 {
+  font-size: 1.75em;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+main {
+  padding: 20px;
+}
+.page-link {
+  font-weight: 600;
+}
 .msg-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .msg {
-  border: 2px solid crimson;
+  border: 2px solid #00b7ff;
   border-radius: 15px;
   padding: 10px;
 }
 
 .user {
-  color: crimson;
+  color: #00b7ff;
+  font-weight: 900;
 }
 
 .text {
   font-weight: 600;
+  font-style: italic;
 }
 .date {
-  color: lightseagreen;
+  color: #007a74;
 }
 .no-msg {
-  color: crimson;
+  color: #00b7ff;
 }
 
 .new-msg {
@@ -37,7 +66,7 @@ a {
   flex-direction: column;
   gap: 20px;
   max-width: 500px;
-  border: 2px solid crimson;
+  border: 2px solid #00b7ff;
   border-radius: 15px;
   padding: 15px;
 }
@@ -58,7 +87,27 @@ a {
   height: 30px;
 }
 .form-submit:hover {
-  background-color: crimson;
-  color: white;
+  background-color: #00b7ff;
   cursor: pointer;
+}
+input {
+  min-width: 50px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #00b7ff;
+  border-top: 3px solid black;
+  font-weight: 600;
+}
+.github {
+  height: 25px;
+  width: 25px;
+}
+
+.github:hover {
+  transform: scale(1.2);
 }

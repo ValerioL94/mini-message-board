@@ -4,7 +4,7 @@
   <body>
     <%- include ('./partials/header.ejs') %>
     <main>
-      <a href="/new"><p>Add new message</p></a>
+      <a href="/new"><p class="page-link">Add new message</p></a>
       <div class="msg-wrapper">
         <% if (messages.length > 0) { %> <% messages.forEach(msg => { %>
         <div class="msg">

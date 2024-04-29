@@ -4,15 +4,15 @@
   <body>
     <%- include ('./partials/header.ejs') %>
     <main>
-      <a href="/"><p>Go to homepage</p></a>
+      <a href="/"><p class="page-link">Go to homepage</p></a>
       <form class="new-msg" method="POST" action="/new">
         <div>
           <label for="author">Author:</label>
-          <input type="text" name="author" id="author" />
+          <input type="text" name="author" id="author" required />
         </div>
         <div>
           <label for="msg">Message:</label>
-          <input type="text" name="msg" id="msg" />
+          <input type="text" name="msg" id="msg" required />
         </div>
         <button class="form-submit">Submit</button>
       </form>
