@@ -10,7 +10,7 @@
         <div class="msg">
           <h2 class="user"><%=msg.user %></h2>
           <p class="text"><%=msg.text %></p>
-          <p class="date"><%=msg.added %></p>
+          <p class="date"><%=msg.added.toLocaleString() %></p>
         </div>
         <% }) %> <% } else { %>
         <p class="no-msg">There are no messages to display</p>
