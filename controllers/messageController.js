@@ -11,7 +11,7 @@ const messageListGet = asyncHandler(async (req, res) => {
 
 const messageCreateGet = asyncHandler(async (req, res) => {
   res.render('form', {
-    title: 'Post message',
+    title: 'Add post',
   });
 });
 
