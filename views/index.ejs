@@ -6,11 +6,11 @@
     <main>
       <a href="/new"><p class="page-link">Add new message</p></a>
       <div class="msg-wrapper">
-        <% if (messages.length > 0) { %> <% messages.forEach(msg => { %>
+        <% if (messages && messages.length) { %> <% messages.forEach(msg => { %>
         <div class="msg">
-          <h2 class="user"><%=msg.user %></h2>
-          <p class="text"><%=msg.text %></p>
-          <p class="date"><%=msg.added.toLocaleString() %></p>
+          <h2 class="user"><%=msg.username %></h2>
+          <p class="text"><%=msg.comment %></p>
+          <p class="date"><%=msg.date.toLocaleString() %></p>
         </div>
         <% }) %> <% } else { %>
         <p class="no-msg">There are no messages to display</p>
